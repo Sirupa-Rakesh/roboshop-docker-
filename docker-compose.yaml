@@ -9,6 +9,8 @@ services:
       dockerfile: catalogue .
     image: catalogue 
     container_name: catalogue
+    depends_on:
+      - mongodb
 
 networks:
   default:
