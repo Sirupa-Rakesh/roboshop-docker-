@@ -1,0 +1,17 @@
+services:
+  mongodb:
+    build: 
+      dockerfile: mongodb . #it moves to the current directory
+    image: mongodb # docker build -t mongodb
+    container_name: mongodb
+  catalogue:
+    build: 
+      dockerfile: catalogue .
+    image: catalogue 
+    container_name: catalogue
+
+networks:
+  default:
+    driver: bridge
+    name: rakesh
+    external: false # true means  u need to create it maually, but false means it will create 
