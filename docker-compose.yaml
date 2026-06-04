@@ -1,11 +1,13 @@
 services:
   mongodb:
-    build: 
+    build:
+      context: ./mongodb
       dockerfile: mongodb . #it moves to the current directory
     image: mongodb # docker build -t mongodb
     container_name: mongodb
   catalogue:
     build: 
+      context: ./catalogue
       dockerfile: catalogue .
     image: catalogue 
     container_name: catalogue
