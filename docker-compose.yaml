@@ -5,6 +5,31 @@ services:
       dockerfile: Dockerfile #it moves to the current directory
     image: mongodb # docker build -t mongodb
     container_name: mongodb
+
+  user:
+    build:
+      context: ./4-user
+      dockerfile: Dockerfile
+    image: user
+    conatiner_name: user
+    depends_on:
+      - redis
+
+  frontend:
+    build: 
+      context: ./3-frontend
+      dockerfile: Dockerfile
+    image: frontend
+    container_name: frontend
+    depends_on:
+      - catalogue
+      - user
+
+
+  redis:
+    images: redis:7.0
+    container_name: redis
+
   catalogue:
     build: 
       context: ./2-catalogue
