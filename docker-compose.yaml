@@ -29,7 +29,7 @@ services:
 
 
   redis:
-    images: redis:7.0
+    image: redis:7.0
     container_name: redis
 
   catalogue:
