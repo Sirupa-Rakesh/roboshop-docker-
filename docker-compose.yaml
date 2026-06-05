@@ -11,7 +11,7 @@ services:
       context: ./4-user
       dockerfile: Dockerfile
     image: user
-    conatiner_name: user
+    container_name: user
     depends_on:
       - redis
 
