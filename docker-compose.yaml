@@ -6,6 +6,17 @@ services:
     image: mongodb # docker build -t mongodb
     container_name: mongodb
 
+  cart:
+    build: 
+      context: ./5-cart
+      dockerfile: Dockerfile
+    image: cart
+    container_name: cart
+    depends_on:
+      - redis
+      - 
+
+
   user:
     build:
       context: ./4-user
@@ -24,6 +35,7 @@ services:
     depends_on:
       - catalogue
       - user
+      - cart
     ports:
       - "80:80"
 
