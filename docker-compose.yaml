@@ -42,18 +42,19 @@ services:
       dockerfile: Dockerfile
     image: payment
     container_name: payment
+    container_: payment
     depends_on:
     - rabbitmq
     - cart
     - user
     environment:
-      CART_HOST= "cart"
-      CART_PORT= "8080"
-      USER_HOST= "user"
-      USER_PORT= "8080"
-      AMQP_HOST= "rabbitmq"
-      AMQP_USER= "roboshop"
-      AMQP_PASSWOED="roboshop123"
+      CART_HOST: "cart"
+      CART_PORT: "8080"
+      USER_HOST: "user"
+      USER_PORT: "8080"
+      AMQP_HOST: "rabbitmq"
+      AMQP_USER: "roboshop"
+      AMQP_PASSWORD: "roboshop123"
 
   rabbitmq:
     image: rabbitmq:3
