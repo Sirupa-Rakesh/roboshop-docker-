@@ -26,8 +26,8 @@ services:
 
   shipping:
     build: 
-    context: ./7-shipping
-    dockerfile: Dockerfile
+      context: ./7-shipping
+      dockerfile: Dockerfile
   image: shipping
   container_name: shipping
   depends_on:
