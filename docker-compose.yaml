@@ -22,7 +22,6 @@ services:
       dockerfile: Dockerfile
     image: mysql
     container_name: mysql
-    
      
 
 
