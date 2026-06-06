@@ -28,10 +28,10 @@ services:
     build: 
       context: ./7-shipping
       dockerfile: Dockerfile
-  image: shipping
-  container_name: shipping
-  depends_on:
-  - mysql
+    image: shipping
+    container_name: shipping
+    depends_on:
+    - mysql
 
      
 
