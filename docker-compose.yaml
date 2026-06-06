@@ -22,6 +22,17 @@ services:
       dockerfile: Dockerfile
     image: mysql
     container_name: mysql
+
+
+  shipping:
+    build: 
+    context: ./7-shipping
+    dockerfile: Dockerfile
+  image: shipping
+  container_name: shipping
+  depends_on:
+  - mysql
+
      
 
 
@@ -44,6 +55,7 @@ services:
       - catalogue
       - user
       - cart
+      - shipping
     ports:
       - "80:80"
 
