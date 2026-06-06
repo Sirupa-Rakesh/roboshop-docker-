@@ -14,7 +14,7 @@ services:
     container_name: cart
     depends_on:
       - redis
-      - 
+     
 
 
   user:
