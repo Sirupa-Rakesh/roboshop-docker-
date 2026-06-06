@@ -8,7 +8,7 @@ RUN npm install
 ENV MONGO="TRUE" \
     MONGO_URL="mongodb://mongodb:27017/catalogue" \
     REDIS_URL="redis://redis:6379"
-CMD ["node","server.js"]
+CMD ["node","service.js"]
 
 
 
