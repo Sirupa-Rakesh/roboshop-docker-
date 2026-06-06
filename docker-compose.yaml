@@ -33,6 +33,15 @@ services:
     depends_on:
     - mysql
 
+
+  rabbitmq:
+    image: raabitmq:3
+    environment:
+      - RABBITMQ_DEFAULT_USER: roboshop
+      - RABBITMQ_DEFAULT_USER: roboshop123
+    container_name: rabbitmq
+
+
      
 
 
